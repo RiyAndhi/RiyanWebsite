@@ -10,7 +10,7 @@
         /* Aturan CSS untuk latar belakang terang */
         body {
             font-family: 'Inter', sans-serif;
-            background-image: linear-gradient(180deg, #b2eaff 0, #5389f2 50%, #003265 100%);
+            background-image: linear-gradient(to bottom right, #00C0FF, #4218B8);
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -31,8 +31,9 @@
             border-radius: 20px;
             padding: 20px;
             box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.151);
+            border: 1px solid rgba(255, 255, 255, 0.151);
             width: 80%; /* Menyesuaikan lebar */
-            max-width: 600px;
+            max-width: 800px;
             margin: auto; /* Mengatur margin menjadi auto untuk tengah horizontal */
             margin-top: auto; /* Mengatur margin atas menjadi auto untuk tengah vertikal */
             margin-bottom: auto; /* Mengatur margin bawah menjadi auto untuk tengah vertikal */
@@ -46,18 +47,36 @@
 
         /* Aturan CSS untuk foto profil */
         .profile-photo {
-            width: 150px;
-            height: 150px;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid rgba(0, 0, 0, 0.151);
+            border: 4px solid rgba(255, 255, 255, 0.151);
+        }
+
+        /* Aturan CSS untuk profil header */
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: auto; /* Jarak antara elemen-elemen */
+            margin-bottom: auto;
         }
 
         /* Aturan CSS untuk nama profil */
         .profile-name {
             text-align: center;
-            font-size: 24px;
+            font-size: 28px;
+            font-weight: bold;
             margin-top: 10px;
+        }
+
+        /* Aturan CSS untuk teks slogan */
+        .profile-slogan {
+            text-align: center;
+            font-size: 16px;
+            color: white; /* Warna teks dengan opasitas */
+            margin-top: 5px;
         }
 
         /* Aturan CSS untuk link sosial media */
@@ -72,39 +91,39 @@
         .social-link {
             display: flex;
             align-items: center;
-            margin: 10px;
+            margin: 2vw; /* Jarak defaultnya menggunakan vw */
             text-decoration: none;
             color: rgb(255, 255, 255);
             transition: background-color 0.3s;
         }
 
         .social-link i {
-            margin-right: 5px;
+            margin-right: 10px;
         }
 
         .social-link:hover {
             background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
+            border-radius: 10px;
         }
 
         /* Aturan CSS untuk tombol switch */
         .switch-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             position: absolute;
             top: 10px; /* Posisi dari atas */
             right: 10px; /* Posisi dari kanan */
-            display: flex;
-            align-items: center;
-        }
-
-        .switch-label {
-            margin-right: 10px;
         }
 
         .switch {
             position: relative;
-            display: inline-block;
             width: 40px;
             height: 20px;
+        }
+
+        .switch-label {
+            margin-right: 10px;
         }
 
         .switch input {
@@ -122,6 +141,7 @@
             background-color: #ccc;
             border-radius: 20px;
             transition: 0.4s;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
         }
 
         .slider:before {
@@ -134,6 +154,7 @@
             background-color: white;
             border-radius: 50%;
             transition: 0.4s;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
         }
 
         input:checked + .slider {
@@ -143,6 +164,10 @@
         input:checked + .slider:before {
             transform: translateX(20px);
         }
+
+        #modeText {
+            font-size: 10px; /* Ganti ukuran teks sesuai kebutuhan */
+        }
     </style>
     <title>Profil Riyan Andhika</title>
 </head>
@@ -150,32 +175,39 @@
     <div class="profile-card">
         <div class="profile-header">
             <div class="switch-container">
-                <span class="switch-label"> </span>
                 <label class="switch">
                     <input type="checkbox" id="darkModeToggle">
                     <span class="slider"></span>
                 </label>
+                <span id="modeText">Click Here</span>
             </div>
             <img src="img/FotoProfil.jpg" alt="Foto Profil" class="profile-photo">
             <h1 class="profile-name">Riyan Andhika</h1>
+            <p class="profile-slogan">🌎 Klaten, Jawa Tengah, Indonesia.</p>
         </div>
         <div class="social-links">
-            <a href="https://www.facebook.com/hea.tayo.5243" class="social-link"><i data-feather="facebook"></i> Facebook</a>
-            <a href="https://www.instagram.com/riyan.bwg" class="social-link"><i data-feather="instagram"></i> Instagram</a>
-            <a href="https://wa.me/6285879688244?text=Halo" class="social-link"><i data-feather="message-circle"></i> WhatsApp</a>
-            <a href="https://wa.me/6285879688244?text=Halo" class="social-link"><i data-feather="linkedin"></i> LinkedIn</a>
+            <a href="https://www.facebook.com/riyanandhikaa" class="social-link" title="Facebook"><i data-feather="facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/riyan.bwg" class="social-link" title="Instagram"><i data-feather="instagram"></i> Instagram</a>
+            <a href="https://wa.me/6285879688244?text=Halo" class="social-link" title="WhatsApp"><i data-feather="message-circle"></i> WhatsApp</a>
+            <a href="https://wa.me/6285879688244?text=Halo" class="social-link" title="LinkedIn"><i data-feather="linkedin"></i> LinkedIn</a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>
         feather.replace();
-
+    
         const darkModeToggle = document.getElementById("darkModeToggle");
+        const modeText = document.getElementById("modeText");
         const body = document.body;
-
+    
         darkModeToggle.addEventListener("change", () => {
             body.classList.toggle("dark-mode");
+            if (body.classList.contains("dark-mode")) {
+                modeText.textContent = "Dark Mode";
+            } else {
+                modeText.textContent = "Light Mode";
+            }
         });
-    </script>
+    </script>    
 </body>
 </html>
