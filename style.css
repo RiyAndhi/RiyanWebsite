@@ -1,8 +1,15 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-image: radial-gradient(circle at 95.45% -4.17%, #ff6de5 0,
-                                      #ef5ee9 12.5%, #d151ed 25%, #ab45f0 37.5%, #783cf2 50%, 
-                                      #0038f4 62.5%, #0039f6 75%, #003bf7 87.5%, #003df6 100%);
+    background-image: radial-gradient(circle at 95.45% -4.17%, 
+                                      #ff6de5 0,
+                                      #ef5ee9 12.5%,
+                                      #d151ed 25%,
+                                      #ab45f0 37.5%,
+                                      #783cf2 50%, 
+                                      #0038f4 62.5%,
+                                      #0039f6 75%, 
+                                      #003bf7 87.5%,
+                                      #003df6 100%);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
