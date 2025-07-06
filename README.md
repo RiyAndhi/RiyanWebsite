@@ -1,2 +1,1 @@
-# Oke!.
-Dilarang Mencomot
+Dilarang mengambil project ini!
